@@ -1,0 +1,16 @@
+<app-top-nav [userId]="userId" [isIn]="true"></app-top-nav >
+<mat-card class="example-card">
+    <img mat-card-image [src]="imageUrl" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>{{imageText}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+        <button mat-raised-button (click)="fileInput.click()">SELECT YOUR PICTURE</button>
+        <br><br>
+        <button [disabled]="isButtonDisabled" mat-raised-button color="primary" (click)="onUpload()">UPLOAD DATA!</button>
+    </mat-card-actions>
+    <p *ngIf="isInvalid" style="text-align: center; color: red;">*PLEASE SELECT A PICTURE FIRST!</p>
+    <p *ngIf="isFinished" style="text-align: center; color: green;">*UPLOADING IMAGE FINISHED!</p>
+    <mat-progress-bar *ngIf="isUploading" mode="indeterminate"></mat-progress-bar>
+</mat-card>
