@@ -1,0 +1,13 @@
+.example-card {
+    max-width: 30%;
+    height: 80%;
+    margin: 100px auto;
+}
+
+.example-card img{
+    height: 60%;
+}
+
+button {
+    width: 100%;
+}

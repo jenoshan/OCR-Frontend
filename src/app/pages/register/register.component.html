@@ -1,0 +1,20 @@
+<app-top-nav [isIn]="false"></app-top-nav >
+<form (ngSubmit)="onRegisterSubmit(userFormData.value)" #userFormData="ngForm">
+    <h2>CREATE A NEW ACCOUNT TO USE OUR OCR APPLICATION!</h2>
+    <br><br>
+    <mat-form-field appearance="outline">
+        <mat-label>Enter your email!</mat-label>
+        <input name="email" matInput placeholder="Email" ngModel>
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline">
+        <mat-label>Enter your password!</mat-label>
+        <input name="password" type="password" matInput placeholder="Password" ngModel>
+    </mat-form-field>
+    <br />
+    <small [class.d-none]="!isSuccessed" class="text-success">YOU HAVE REGISTERED!</small>
+    <small [class.d-none]="!isUserExist" class="text-danger">ALREADY A USER EXIST!</small>
+    <br />
+    <button mat-raised-button color="primary">REGISTER</button>
+    <!-- <br/>{{userFormData.value | json}} -->
+</form>
