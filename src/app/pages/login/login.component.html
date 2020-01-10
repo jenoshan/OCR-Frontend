@@ -1,0 +1,22 @@
+<app-top-nav [isIn]="false"></app-top-nav >
+<form (ngSubmit)="onLoginSubmit(userFormData.value)" #userFormData="ngForm">
+    <h2>LOGIN TO USE OUR OCR APPLICATION!</h2>
+    <br><br>
+    <mat-form-field appearance="outline">
+        <mat-label>Enter your email!</mat-label>
+        <input name="email" matInput placeholder="Email" ngModel>
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline">
+        <mat-label>Enter your password!</mat-label>
+        <input name="password" type="password" matInput placeholder="Password" ngModel>
+    </mat-form-field>
+    <br />
+    <small class="text-danger" [class.d-none]="isUserExist">USERNAME OR PASSWORD IS INCORRECT!</small>
+    <br />
+    <button mat-raised-button color="primary">LOGIN</button>
+    <!-- <br/>{{userFormData.value | json}} -->
+</form>
+<!-- <div *ngFor="let user of userData">
+    {{user | json}}
+</div> -->

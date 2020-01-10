@@ -1,0 +1,21 @@
+mat-toolbar {
+    background-color: blue;
+    color: white;
+}
+
+mat-toolbar div {
+    margin-left: auto;
+}
+
+mat-toolbar div a {
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+}
+
+mat-toolbar div a:hover,
+mat-toolbar div a:active {
+    color: black;
+    background-color: lightskyblue;
+}

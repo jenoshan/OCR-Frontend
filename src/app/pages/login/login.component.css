@@ -1,0 +1,20 @@
+form {
+    margin-top: 200px;
+    text-align: center;
+}
+
+/* button{
+    background-color: blue;
+} */
+
+form mat-form-field {
+    width: 30%;
+}
+
+form button {
+    width: 100px;
+}
+
+form h2{
+    color: blue;
+}
