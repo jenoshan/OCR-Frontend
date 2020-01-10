@@ -1,0 +1,18 @@
+.example-card {
+    width: 20%;
+    height: 25%;
+    float: left;
+    margin: 100px 40px;
+}
+
+.example-card img{
+    height: 80%;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+button {
+    width: 100%;
+}
